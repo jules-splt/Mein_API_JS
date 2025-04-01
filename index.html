@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" type="text/css">
+   <script src="script.js"></script>
+   <title>Liste des Véhicules</title>
+</head>
+<body>
+   <h1>Liste des Véhicules</h1>
+   
+   <div class="menu-container">
+      <button class="menu-button" onclick="toggleMenu('countryMenu')">Filtrer par pays</button>
+      <div class="dropdown-menu" id="countryMenu"></div>
+   </div>
+
+   <div class="menu-container">
+      <button class="menu-button" onclick="toggleMenu('TiersMenu')">Filtrer par Tiers</button>
+      <div class="dropdown-menu" id="TiersMenu"></div>
+   </div>
+   
+   <div class="filters">
+      <label><input type="checkbox" id="isPremium"> Premium</label>
+      <label><input type="checkbox" id="isPack"> Pack</label>
+      <label><input type="checkbox" id="isSquadronVehicle"> Escadron</label>
+      <label><input type="checkbox" id="isOnMarketplace"> Marketplace</label>
+      <label><input type="checkbox" id="excludeKillstreak" checked> Exclure Killstreak</label>
+      <label><input type="checkbox" id="excludeEventVehicles" checked> Exclure Événements</label>
+      <button onclick="applyFilters()">Appliquer</button>
+   </div>
+
+   <div class="container" id="vehicles"></div>
+
+
+</body>
+</html>
