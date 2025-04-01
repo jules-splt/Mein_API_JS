@@ -40,7 +40,6 @@ let allVehicles = [];
             extractCountries();
             extractTiers();
             displayVehicles(allVehicles);
-            console.log(allVehicles.length)
          } catch (error) {
             console.error("Erreur lors de la récupération des véhicules :", error);
          }
